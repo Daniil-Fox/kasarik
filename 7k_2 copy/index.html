@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>7k</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="./img/logo.png" alt="" />
+        </a>
+        <div class="title">
+          <div class="title__top text__gradient">
+            <span class="ru">КРУТИ КОЛЕСО</span>
+          </div>
+          <div class="title__top text__gradient">
+            <span class="ru">и выигрывай бонусы</span>
+          </div>
+        </div>
+        <div class="wheel">
+          <img
+            src="./img/wheel-ru.png"
+            id="wheel__spinner"
+            class="wheel__spinner wheel__spinner_animated"
+          />
+
+          <div class="wheel__border"></div>
+          <div class="wheel__arrow"></div>
+          <button class="wheel__button" id="wheel__button">
+            <span>крутить</span>
+          </button>
+          <div class="joker">
+            <picture>
+              <source srcset="./img/joker.webp" type="image/webp" />
+              <img src="./img/joker.png" alt="" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="popup">
+        <div class="popup__window popup__window_1" id="popup__window_1">
+          <div class="coin coin-1">
+            <picture>
+              <source srcset="./img/coin-1.webp" type="image/webp" />
+              <source srcset="./img/coin-1.png" type="image/png" />
+              <img src="./img/coin-1.png" alt="" />
+            </picture>
+          </div>
+          <div class="coin coin-2">
+            <picture>
+              <source srcset="./img/coin-2.webp" type="image/webp" />
+              <source srcset="./img/coin-2.png" type="image/png" />
+              <img src="./img/coin-2.png" alt="" />
+            </picture>
+          </div>
+          <div class="coin coin-3">
+            <picture>
+              <source srcset="./img/coin-3.webp" type="image/webp" />
+              <img src="./img/coin-3.png" alt="" />
+            </picture>
+          </div>
+          <div class="fire">
+            <div class="fire-1">
+              <picture>
+                <source srcset="./img/fire-1.webp" type="image/webp" />
+                <img src="./img/fire-1.png" alt="" />
+              </picture>
+            </div>
+            <div class="fire-2">
+              <picture>
+                <source srcset="./img/fire-2.webp" type="image/webp" />
+                <img src="./img/fire-2.png" alt="" />
+              </picture>
+            </div>
+            <div class="fire-3">
+              <picture>
+                <source srcset="./img/fire-3.webp" type="image/webp" />
+                <img src="./img/fire-3.png" alt="" />
+              </picture>
+            </div>
+          </div>
+
+          <div class="popup__container">
+            <div class="popup__content">
+              <div class="popup__title text__gradient_popup">
+                <span class="ru">Поздравляем!</span>
+              </div>
+              <div class="popup__text popup__text_bonus">
+                <span class="ru">Вы выиграли</span>
+              </div>
+              <div class="popup__win text__gradient_popup">
+                <span class="ru">500 фриспинов</span>
+              </div>
+
+              <div class="popup__text_additional">
+                <span class="ru">Осталась еще одна попытка</span>
+              </div>
+            </div>
+            <div class="popup__wheel">
+              <picture>
+                <source srcset="./img/popup-img.webp" type="image/webp" />
+                <img src="./img/popup-img.png" alt="" />
+              </picture>
+            </div>
+            <button class="popup__btn" id="popup__btn">
+              <span class="ru">Крутить еще раз</span>
+            </button>
+          </div>
+        </div>
+        <div class="popup__window" id="popup__window_2">
+          <div class="coin coin-1">
+            <picture>
+              <source srcset="./img/coin-1.webp" type="image/webp" />
+              <img src="./img/coin-1.png" alt="" />
+            </picture>
+          </div>
+          <div class="coin coin-2">
+            <picture>
+              <source srcset="./img/coin-2.webp" type="image/webp" />
+              <img src="./img/coin-2.png" alt="" />
+            </picture>
+          </div>
+          <div class="coin coin-3">
+            <picture>
+              <source srcset="./img/coin-3.webp" type="image/webp" />
+              <img src="./img/coin-3.png" alt="" />
+            </picture>
+          </div>
+          <div class="fire">
+            <div class="fire-1">
+              <picture>
+                <source srcset="./img/fire-1.webp" type="image/webp" />
+                <img src="./img/fire-1.png" alt="" />
+              </picture>
+            </div>
+            <div class="fire-2">
+              <picture>
+                <source srcset="./img/fire-2.webp" type="image/webp" />
+                <img src="./img/fire-2.png" alt="" />
+              </picture>
+            </div>
+            <div class="fire-3">
+              <picture>
+                <source srcset="./img/fire-3.webp" type="image/webp" />
+                <img src="./img/fire-3.png" alt="" />
+              </picture>
+            </div>
+          </div>
+          <div class="popup__container">
+            <div class="popup__content">
+              <div class="popup__title text__gradient_popup">
+                <span class="ru">Поздравляем!</span>
+              </div>
+              <div class="popup__text popup__text_bonus">
+                <span class="ru">Вы выиграли бонус </span>
+              </div>
+              <div class="popup__win text__gradient_popup">
+                <span class="ru">500FS + 500%</span>
+              </div>
+              <div class="popup__win_text popup__text">
+                <span class="ru">к депозиту</span>
+              </div>
+            </div>
+            <div class="popup__img_fire">
+              <picture>
+                <source srcset="./img/popup-fire.webp" type="image/webp" />
+                <source srcset="./img/popup-fire.png" type="image/png" />
+                <img src="./img/popup-fire.png" alt="" />
+              </picture>
+            </div>
+            <div class="popup__img_joker">
+              <picture>
+                <source srcset="./img/joker-popup.webp" type="image/webp" />
+                <img src="./img/joker-popup.png" alt="" />
+              </picture>
+            </div>
+            <a class="popup__btn" id="congrat_link" href="#">
+              <span class="ru">Забрать бонус</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

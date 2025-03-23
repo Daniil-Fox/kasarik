@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Колесо Фортуны - 225% + 70FS</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="#">
+        <img
+          class="header__logo-img"
+          src="img/logo/logo_casino.png"
+          alt="Pinco"
+        />
+      </a>
+    </header>
+
+    <main class="main">
+      <div class="decor-items">
+        <div class="decor-items__container">
+          <div class="decor-items__item decor-items__item--coins-front">
+            <picture>
+              <source
+                media="(orientation: portrait)"
+                srcset="img/decor/coins-mob.png"
+              />
+              <img src="img/decor/coins.png" alt="Золотые монеты" />
+            </picture>
+          </div>
+          <div class="decor-items__item decor-items__item--sparks">
+            <img src="img/decor/sparks.png" alt="Искры" />
+          </div>
+          <div class="falling-items">
+            <div class="falling-items__set">
+              <div class="falling-items__item falling-items__item--1">
+                <img src="img/decor/coin-1.png" alt="Монета" />
+              </div>
+              <div class="falling-items__item falling-items__item--2">
+                <img src="img/decor/coin-2.png" alt="Монета" />
+              </div>
+              <div class="falling-items__item falling-items__item--3">
+                <img src="img/decor/coin-3.png" alt="Монета" />
+              </div>
+              <div class="falling-items__item falling-items__item--4">
+                <img src="img/decor/coin-4.png" alt="Монета" />
+              </div>
+              <div class="falling-items__item falling-items__item--5">
+                <img src="img/decor/coin-5.png" alt="Монета" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="game-section">
+        <h1 class="ribbons smooth-text">Крути колесо и<br />выигрывай призы</h1>
+
+        <div class="wheel">
+          <div class="wheel__layout">
+            <div class="wheel__spinner">
+              <div class="wheel__spinner-img"></div>
+              <div class="wheel__spinner-around"></div>
+              <div class="wheel__spinner-arrow"></div>
+              <div class="wheel__spinner-center-wrap">
+                <button class="wheel__spinner-center run-circle" type="button">
+                  Крутить
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="wheel__attempts">
+            <span class="wheel__attempts-title">Осталось попыток -&nbsp;</span>
+            <span class="wheel__attempts-value" id="counter_spin">3</span>
+          </div>
+        </div>
+
+        <div class="wheel__achievements">
+          <div class="wheel__achievements-fs">
+            <div class="lights-content lights-content_fs">
+              <img
+                class="lights-content__gift"
+                src="img/bonus/gift.png"
+                alt="Подарок"
+              />
+              <span class="lights-content__value">
+                <span class="lights-content__value--num">225%</span>
+                <span class="lights-content__value--subtitle">к депозиту</span>
+              </span>
+              <button class="lights-content__button" type="button">
+                Забрать
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="main__modal">
+      <div class="main__decor">
+        <div class="falling-items">
+          <div class="falling-items__set">
+            <div class="falling-items__item falling-items__item--1">
+              <img src="img/decor/coin-1.png" alt="Money" />
+            </div>
+            <div class="falling-items__item falling-items__item--2">
+              <img src="img/decor/coin-2.png" alt="Money" />
+            </div>
+            <div class="falling-items__item falling-items__item--3">
+              <img src="img/decor/coin-3.png" alt="Money" />
+            </div>
+            <div class="falling-items__item falling-items__item--4">
+              <img src="img/decor/coin-4.png" alt="Money" />
+            </div>
+            <div class="falling-items__item falling-items__item--5">
+              <img src="img/decor/coin-5.png" alt="Money" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal_show">
+        <div class="modal__inner">
+          <div class="modal__wrapper">
+            <div class="comp-title">
+              <div class="comp-title__title">НА ПЕРВЫЙ ДЕПОЗИТ</div>
+              <div class="comp-title__bonus">500 000 RUB + 250FS</div>
+            </div>
+            <form class="active" id="phone-form">
+              <button class="submit-btn" type="button">Получить приз</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

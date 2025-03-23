@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <script
+      src="https://primebet.pro/l/jquery-3.6.4.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Испытай удачу и получи до 200% бонуса!</title>
+
+    <!-- Meta Description и Keywords -->
+    <meta
+      name="description"
+      content="Испытай удачу с нашей уникальной прокруткой Колеса Фортуны! Выигрывай призы, бонусы, скидки, фриспины и эксклюзивные казино-награды всего в один клик. Попробуй прямо сейчас и ощути настоящий азарт!"
+    />
+    <meta
+      name="keywords"
+      content="колесо фортуны, прокрутка колеса фортуны, онлайн колесо удачи, розыгрыш призов, выиграть приз"
+    />
+
+    <link rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.webp" />
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="32x32"
+      href="assets/favicon.webp"
+    />
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="16x16"
+      href="assets/favicon.webp"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <header class="header">
+        <div class="header__left">
+          <a class="header__left-logo redirectlink" href="#"
+            ><img src="assets/img/logo.png" alt="Pinup"
+          /></a>
+        </div>
+      </header>
+      <div class="title">
+        <div class="title__top">КРУТИТЕ КОЛЕСО ФОРТУНЫ</div>
+        <div class="title__bottom">И ЗАБЕРИТЕ <span>ПРИЗ!</span></div>
+      </div>
+      <div class="decor-items">
+        <div class="decor-items__container">
+          <div class="decor-items__item decor-items__item--coins-front">
+            <picture>
+              <source
+                media="(orientation: portrait)"
+                srcset="./assets/img/decor/coins-mob.webp"
+              />
+              <img
+                class="lazyload"
+                src="./assets/img/decor/coins.webp"
+                alt="Gold coins"
+              />
+            </picture>
+          </div>
+          <div class="decor-items__item decor-items__item--sparks">
+            <img
+              class="lazyload"
+              src="./assets/img/decor/sparks.webp"
+              alt="Sparks"
+            />
+          </div>
+          <div class="decor-items__item decor-items__item--girl-left">
+            <img class="lazyload" src="./assets/img/left.webp" alt="girl" />
+          </div>
+          <div class="decor-items__item decor-items__item--girl-right">
+            <img class="lazyload" src="./assets/img/right.webp" alt="girl" />
+          </div>
+        </div>
+      </div>
+      <div class="main__bg-first"></div>
+      <div
+        class="main__bg-second"
+        style="
+          transform: translateX(calc(0.220625%)) translateY(calc(-0.364375%));
+        "
+      ></div>
+      <div class="main__elements"></div>
+      <div class="wheel main__new-wheel">
+        <div class="wheel__layout stage-1">
+          <div class="wheel__spinner">
+            <div class="wheel__spinner-img"></div>
+            <div class="wheel__spinner-around" id="wheel"></div>
+
+            <div class="wheel__spinner-arrow"></div>
+            <div class="wheel__spinner-center-wrap">
+              <div class="wheel__spinner-center run-circle" id="wheel__button">
+                Крутить
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wheel__attempts"></div>
+      </div>
+
+      <!-- Контейнер для анимации сундука -->
+      <div class="chest-container hide">
+        <img src="assets/chest.webp" alt="Сундук" class="chest" />
+        <!-- Блок для анимации трещин; можно использовать картинку с трещинами -->
+      </div>
+      <div class="overlay hide" id="popup"></div>
+
+      <div class="wheel__achievements">
+        <div class="wheel__achievements-fs hide" id="popup__window_1">
+          <div class="lights-content lights-content_fs">
+            <img
+              class="lights-content__gift"
+              src="assets/img/bonus/gift.webp"
+              alt="Gift"
+            />
+            <span class="lights-content__value">
+              <span class="lights-content__value--subtitle">ВЫ ВЫИГРАЛИ!</span>
+              <span class="lights-content__value--num">70</span>
+              <span class="lights-content__value--subtitle"
+                >бесплатных вращений</span
+              >
+            </span>
+            <button class="lights-content__button" id="popup__btn">
+              Еще раз
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__modal">
+        <div class="modal">
+          <div class="arturzmfey" id="popup__window_2">
+            <div class="arturcyjta">
+              <div class="arturezs4n">Поздравляем!</div>
+              <div class="arturwv6cx">
+                Вы выиграли <span>70</span> бесплатных вращений и
+                <span>+225%</span> на первый депозит!
+              </div>
+            </div>
+            <div></div>
+            <div class="arturvjwf7">
+              <a id="claim-link" href="#">
+                <button
+                  class="artur1gwkw"
+                  type="button"
+                  id="style-Yt2DC"
+                  style="animation: pulseAnimation 1s infinite"
+                >
+                  Забрать
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notification-container" id="notifications"></div>
+
+      <div class="alert">
+        <div class="alert__close"></div>
+        <div class="alert__text"></div>
+      </div>
+
+      <script src="assets/script.js"></script>
+    </div>
+  </body>
+</html>
