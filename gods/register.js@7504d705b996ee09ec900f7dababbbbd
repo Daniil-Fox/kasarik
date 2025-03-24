@@ -1,0 +1,62 @@
+function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+}
+
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+}
+
+function onRegisterSuccess() {
+    setCookie('registered', 'true', 360);
+}
+
+document.getElementById('autoRegForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (!window.formValidator || window.formValidator()) {
+        try {
+            let formData = new FormData(event.target);
+
+            let urlParams = new URLSearchParams(window.location.search);
+            urlParams.forEach((value, key) => {
+                formData.append(key, value);
+            });
+
+            fetch(event.target.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // console.log('Server Response:', data);
+
+                    if (data.success) {
+                        onRegisterSuccess();
+                        window.location.href = data.url;
+                        // window.open(data.url, '_blank');
+                    } else {
+                        alert('Registration error: ' + (data.error || 'Undefined error'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Registration error:', error);
+                });
+        } catch (e) {
+            console.error('Registration error:', e);
+        }
+    }
+});
+
+!function () {
+    if (getCookie('registered') === 'true') {
+        let afterRegUrl = document.querySelector('a').href;
+        window.location.href = afterRegUrl;
+    }
+}();
+

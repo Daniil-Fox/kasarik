@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <link
+      rel="shortcut icon"
+      href="192x192.png@4d5fbf06bddf970a10d5a72fb58599cc"
+      sizes="192x192"
+    />
+    <link
+      rel="shortcut icon"
+      href="32x32.png@4d5fbf06bddf970a10d5a72fb58599cc"
+      sizes="32x32"
+    />
+    <link
+      rel="shortcut icon"
+      href="16x16.png@4d5fbf06bddf970a10d5a72fb58599cc"
+      sizes="16x16"
+    />
+    <title>Joycasino</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.1/css/intlTelInput.css"
+    />
+    <link
+      rel="stylesheet"
+      href="gods/css/style.min.css@18f98f348f5d8812e22cfd4ad73fe096.css"
+    />
+    <base href="" />
+
+    <script async src="bonus.js"></script>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <nav class="header__navigation">
+        <a href="#" class="header__logo-link">
+          <img
+            src="gods/images/logo.svg@18f98f348f5d8812e22cfd4ad73fe096"
+            alt="Joycasino"
+            class="header__logo"
+          />
+        </a>
+      </nav>
+    </header>
+
+    <div class="page__content-wrapper">
+      <div class="intro">
+        <div class="intro__content">
+          <div class="intro__video-wrapper">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              poster="gods/images/poster.webp@18f98f348f5d8812e22cfd4ad73fe096"
+              preload="auto"
+            >
+              <source
+                src="gods/video/main_background-mobile.webm@18f98f348f5d8812e22cfd4ad73fe096"
+                type="video/webm"
+                media="(max-width:809px)"
+              />
+              <source
+                src="gods/video/main_background.webm@18f98f348f5d8812e22cfd4ad73fe096"
+                type="video/webm"
+                media="(min-width:431px)"
+              />
+            </video>
+            <div class="intro__label"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page__container">
+        <div class="form">
+          <h1 class="form__title">
+            до 200,000 рублей<br />
+            за регистрацию!
+          </h1>
+
+          <div class="form__form-wrapper">
+            <form id="autoRegForm" method="post" class="form__reg-form">
+              <div class="form__inputs-block">
+                <label class="form__label">
+                  <input
+                    class="form__input god-email-field"
+                    type="email"
+                    name="email"
+                    id="email-input"
+                    value=""
+                    placeholder="Почта"
+                    required
+                  />
+                  <span class="form__hint"></span>
+                </label>
+
+                <label class="form__label">
+                  <input
+                    type="text"
+                    name="first_name"
+                    class="form__input"
+                    value=""
+                    placeholder="Имя"
+                    required
+                  />
+                  <span class="form__hint"></span>
+                </label>
+                <label class="form__label">
+                  <input
+                    type="text"
+                    name="last_name"
+                    class="form__input"
+                    value=""
+                    placeholder="Фамилия"
+                    required
+                  />
+                  <span class="form__hint"></span>
+                </label>
+
+                <label class="form__label">
+                  <input
+                    class="form__input god-pass-field"
+                    id="password-input"
+                    type="password"
+                    name="password"
+                    value=""
+                    required
+                    placeholder="Пароль*"
+                    title="Пароль должен содержать не менее 8 символов, включая хотя бы одну букву и одну цифру."
+                  />
+                  <span class="form__hint"></span>
+                  <span class="form__eye" id="eye"></span>
+                </label>
+
+                <label class="form__label--phone">
+                  <input
+                    type="text"
+                    class="form__input form__input--iti god-phone-field"
+                    id="phone-number"
+                    name="phone-number"
+                  />
+                  <input
+                    type="text"
+                    class="form__input is-hidden"
+                    id="phone"
+                    name="phone"
+                    value=""
+                  />
+                  <span class="form__hint"></span>
+                </label>
+
+                <label class="form__label">
+                  <select
+                    class="form__input form__select god-currency field"
+                    id="currency"
+                    name="currency"
+                  >
+                    <option value="RUB">RUB</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="JPY">JPY</option>
+                    <option value="UAH">UAH</option>
+                    <option value="NZD">NZD</option>
+                    <option value="INR">INR</option>
+                    <option value="KZT">KZT</option>
+                    <option value="IDR">IDR</option>
+                    <option value="AZN">AZN</option>
+                    <option value="UZS">UZS</option>
+                    <option value="THB">THB</option>
+                    <option value="VND">VND</option>
+                    <option value="KRW">KRW</option>
+                  </select>
+                </label>
+              </div>
+
+              <button class="form__button god-submit-btn" type="submit">
+                Регистрация
+              </button>
+
+              <p class="form__text-login">
+                Уже есть учетная запись?
+                <a href="#" class="form__text-link">Войти</a>
+              </p>
+              <div class="form__terms">
+                <p>
+                  Кликая регистрация я подтверждаю, что мне 18+ и я согласен с
+                  <span>Правилами и Условиями</span>
+                  и <span>политикой</span>
+                  <span>конфиденциальности</span>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="bonuses">
+          <ul class="bonuses__list">
+            <li class="bonuses__item bonuses__item--1">
+              <img
+                src="gods/images/200percent.webp@18f98f348f5d8812e22cfd4ad73fe096"
+                alt="Bonus"
+                class="bonuses__image"
+              />
+              <p class="bonuses__text">БОНУС 200% на первый депозит</p>
+            </li>
+            <li class="bonuses__item bonuses__item--2">
+              <img
+                src="gods/images/fs200.webp@18f98f348f5d8812e22cfd4ad73fe096"
+                alt="Bonus"
+                class="bonuses__image"
+              />
+              <p class="bonuses__text">200 Free spins</p>
+            </li>
+            <li class="bonuses__item bonuses__item--3">
+              <img
+                src="gods/images/freebet.webp@18f98f348f5d8812e22cfd4ad73fe096"
+                alt="Bonus"
+                class="bonuses__image"
+              />
+              <p class="bonuses__text">ФРИБЕТ 500 руб</p>
+            </li>
+            <li class="bonuses__item bonuses__item--4">
+              <img
+                src="gods/images/live-dealer-voucher.webp@18f98f348f5d8812e22cfd4ad73fe096"
+                alt="Bonus"
+                class="bonuses__image"
+              />
+              <p class="bonuses__text">ВАУЧЕР ДЛЯ ЛАЙВ ДИЛЕРОВ</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer__partners">
+          <img
+            src="gods/images/18+.svg@18f98f348f5d8812e22cfd4ad73fe096"
+            alt=""
+            class="footer__icons"
+          />
+          <img
+            src="gods/images/Curacao_license_icon.svg@18f98f348f5d8812e22cfd4ad73fe096"
+            alt=""
+            class="footer__icons"
+          />
+          <img
+            src="gods/images/logo_PoshFriends.svg@18f98f348f5d8812e22cfd4ad73fe096"
+            alt=""
+            class="footer__icons"
+          />
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.1/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
+    <script src="gods/js/main.min.js"></script>
+    <!-- <script src="register.js@7504d705b996ee09ec900f7dababbbbd"></script> -->
+  </body>
+</html>

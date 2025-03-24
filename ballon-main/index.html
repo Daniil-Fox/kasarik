@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Бонусы ждут – крути и выигрывай!</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body style="min-height: 100vh">
+    <div class="decor-items" id="parallaxContainer">
+      <div class="decor-items__container">
+        <img
+          class="decor-items__item decor-items__girl-left"
+          src="img/girl_left.png"
+          alt="Decor item woman"
+        />
+        <picture class="decor-items__item decor-items__1">
+          <source
+            media="(orientation: portrait)"
+            srcset="./img/decor_item_1_mb.png"
+          />
+          <img src="./img/decor_item_1.png" />
+        </picture>
+        <img
+          class="decor-items__item decor-items__coin-1"
+          src="img/coin_1.png"
+        />
+        <img
+          class="decor-items__item decor-items__coin-2"
+          src="img/coin_2.png"
+        />
+        <img
+          class="decor-items__item decor-items__coin-3"
+          src="img/coin_3.png"
+        />
+        <img
+          class="decor-items__item decor-items__coin-4"
+          src="img/coin_4.png"
+        />
+        <img
+          class="decor-items__item decor-items__coin-5"
+          src="img/coin_5.png"
+        />
+      </div>
+    </div>
+    <div class="main" style="min-height: 100vh">
+      <div class="main__inner">
+        <header class="header">
+          <a class="header__logo exclude redirectlink" href="#">
+            <img class="header__logo-img" src="img/logo.png" alt="Pinco" />
+          </a>
+        </header>
+        <div class="ribbons">
+          <div class="ribbons__title-first">Бонусы ждут –</div>
+          <div class="ribbons__title-second">крути и выигрывай!</div>
+          <div class="ribbons__title-att">ОСТАЛОСЬ <span>2</span> ПОПЫТКИ!</div>
+        </div>
+        <div class="wheel main__new-wheel">
+          <div class="wheel__layout stage-1 stage-1-complete">
+            <div class="wheel__spinner-center run-circle">
+              <div class="wheel__spinner-btn"></div>
+            </div>
+            <div class="wheel__spinner">
+              <div class="wheel__spinner-top"></div>
+              <div class="wheel__spinner-pointer"></div>
+              <div class="wheel__spinner-img"></div>
+            </div>
+            <div class="wheel__win"></div>
+          </div>
+        </div>
+        <div class="ribbons__prize ribbons__prize--first">
+          ВЫ ЕЩЕ НИЧЕГО НЕ ВЫЙГРАЛИ
+        </div>
+        <div class="ribbons__prize ribbons__prize--prize">
+          Вы выйграли 70&nbsp;фриспинов!
+
+          <a href="#" class="ribbons__btn"> ЗАБРАТЬ! </a>
+        </div>
+        <div class="main__modal">
+          <div class="wheel__achievements-bonus hide">
+            <div class="lights-content">
+              <span class="lights-content__value lights-content__bonus-value"
+                >70</span
+              >
+              <span class="lights-content__subtitle">фриспинов</span>
+            </div>
+          </div>
+          <div class="wheel__achievements-bet hide">
+            <div class="lights-content">
+              <span class="lights-content__title">бонус</span>
+              <span class="lights-content__value lights-content__bet-value"
+                >225% <br />
+                + 70 FS</span
+              >
+              <a href="#" class="lights-content__button">Забрать все бонусы</a>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal__inner">
+              <div class="modal__wrapper">
+                <div class="comp-title">
+                  <p class="comp-title__first">225% + 70FS</p>
+                  <p class="comp-title__second">на первый депозит!</p>
+                </div>
+                <ul class="tabs">
+                  <li class="tabs__item">
+                    <button class="one active tabs__button" id="reg-btn-tel">
+                      <span class="title">По телефону</span>
+                    </button>
+                  </li>
+                  <li class="tabs__item">
+                    <button class="two tabs__button" id="reg-btn-email">
+                      <span class="title">По e-mail</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="forms">
+                  <form
+                    class="active"
+                    id="phone-form"
+                    name="form-reg"
+                    method="post"
+                  >
+                    <div class="phone-form">
+                      <p class="phone-form__header">
+                        Введите свой номер телефона
+                      </p>
+                      <div class="select-phone">
+                        <div class="select-phone__placeholder">
+                          <img
+                            class="select-phone__placeholder-logo js--phone"
+                            width="30"
+                            height="24"
+                            src="img/russian.png"
+                          />
+                          <input
+                            class="select-phone__placeholder-input js--phoneInput"
+                            required
+                            type="tel"
+                            tabindex="-1"
+                            data-property="default"
+                            id="phone-id"
+                            minlength="3"
+                            name="phone"
+                            autocomplete="off"
+                            data-number="+7"
+                            maxlength="12"
+                          />
+                          <button
+                            class="select-phone__placeholder-btn js--ctrl js--phone"
+                            type="button"
+                            aria-label="Открыть список стран"
+                          ></button>
+                          <div class="divider"></div>
+                        </div>
+                        <ul class="select-phone__list"></ul>
+                      </div>
+                      <div class="select-currency">
+                        <button
+                          class="select-currency__main js--currency"
+                          type="button"
+                        >
+                          <div class="select-currency__placeholder">
+                            <div class="select-currency__icon">
+                              <i
+                                class="select-currency__icon-font icon-rub"
+                              ></i>
+                            </div>
+                            <div class="select-currency__name">RUB</div>
+                            <div class="select-currency__text">
+                              Российский рубль
+                            </div>
+                          </div>
+                        </button>
+                        <ul class="select-currency__list"></ul>
+                      </div>
+                    </div>
+                    <div class="forms__questions">
+                      <span class="alredy-registred">Уже есть аккаунт?</span>
+                      <a class="forms__signin-link" href="#">Войти</a>
+                    </div>
+                    <div class="checkbox">
+                      <div class="checkbox__item checkbox__item_rules">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          checked
+                          id="check-rules-p"
+                          required
+                        />
+                        <label class="checkbox__label" for="check-rules-p">
+                          <span class="checkbox__label-icon"></span>
+                        </label>
+                        <div class="checkbox__text">
+                          <span>Я согласен </span>
+                          <a class="checkbox__text-link" href="#"
+                            >с правилами и условиями</a
+                          >
+                        </div>
+                      </div>
+                      <div class="checkbox__item checkbox__item_sub">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          checked
+                          id="check-subs-p"
+                        />
+                        <label class="checkbox__label" for="check-subs-p">
+                          <span class="checkbox__label-icon"></span>
+                        </label>
+                        <div class="checkbox__text">
+                          <p>Получать рассылку об акциях по e-mail и sms</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="submit-btn" type="button">
+                      Зарегистрироваться
+                    </button>
+                  </form>
+                  <form id="email-form" name="email-reg" method="post">
+                    <div class="email-form">
+                      <div class="email-form__item">
+                        <input
+                          class="email-form__email-input"
+                          type="text"
+                          required
+                          placeholder="E-mail"
+                          id="email-input"
+                          name="email"
+                        />
+                      </div>
+                      <div class="email-form__item">
+                        <input
+                          class="email-form__password-input"
+                          type="password"
+                          required
+                          placeholder="Пароль"
+                          id="password-input"
+                          name="password"
+                        />
+                        <div
+                          class="email-form__view-icon email-form__view-icon_close"
+                          onclick="changePasswordType()"
+                        ></div>
+                      </div>
+                      <div class="select-currency">
+                        <button
+                          class="select-currency__main js--currency"
+                          type="button"
+                        >
+                          <div class="select-currency__placeholder">
+                            <div class="select-currency__icon">
+                              <i
+                                class="select-currency__icon-font icon-rub"
+                              ></i>
+                            </div>
+                            <div class="select-currency__name">RUB</div>
+                            <div class="select-currency__text">
+                              Российский рубль
+                            </div>
+                          </div>
+                        </button>
+                        <ul class="select-currency__list"></ul>
+                      </div>
+                    </div>
+                    <div class="forms__questions">
+                      <span class="alredy-registred">Уже есть аккаунт?</span>
+                      <a class="forms__signin-link" href="#">Войти</a>
+                    </div>
+                    <div class="checkbox">
+                      <div class="checkbox__item checkbox__item_rules">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          checked
+                          id="check-rules-e"
+                          required
+                        />
+                        <label class="checkbox__label" for="check-rules-e">
+                          <span class="checkbox__label-icon"></span>
+                        </label>
+                        <div class="checkbox__text">
+                          <span>Я согласен </span>
+                          <a class="checkbox__text-link" href="#"
+                            >с правилами и условиями</a
+                          >
+                        </div>
+                      </div>
+                      <div class="checkbox__item checkbox__item_sub">
+                        <input
+                          class="checkbox__input"
+                          type="checkbox"
+                          checked
+                          id="check-subs-e"
+                        />
+                        <label class="checkbox__label" for="check-subs-e">
+                          <span class="checkbox__label-icon"></span>
+                        </label>
+                        <div class="checkbox__text">
+                          <p>Получать рассылку об акциях по e-mail и sms</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="submit-btn" type="button">
+                      Зарегистрироваться
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert">
+      <div class="alert__close"></div>
+      <div class="alert__text"></div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
